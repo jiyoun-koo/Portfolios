@@ -1,0 +1,397 @@
+// material icons
+@font-face {
+  font-family: "Material Icons";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://example.com/MaterialIcons-Regular.eot); /* For IE6-8 */
+  src: local("Material Icons"), local("MaterialIcons-Regular"),
+    url(https://example.com/MaterialIcons-Regular.woff2) format("woff2"),
+    url(https://example.com/MaterialIcons-Regular.woff) format("woff"),
+    url(https://example.com/MaterialIcons-Regular.ttf) format("truetype");
+}
+.material-icons {
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px; /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: "liga";
+}
+
+.inner {
+  position: relative;
+  width: 118rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+  @media (max-width: 1180px) {
+    width: 100%;
+  }
+}
+
+// main descrition
+.info-desc {
+  text-align: center;
+  @include font-style($font-size-42, 600, 4.4rem, 0, $color-secondary);
+
+  strong {
+    color: $color-primary;
+
+    @media (max-width: 768px) {
+      text-align: left;
+      display: block;
+    }
+  }
+
+  span {
+    @media (max-width: 768px) {
+      text-align: left;
+      display: block;
+    }
+  }
+
+  em {
+    font-style: normal;
+  }
+}
+
+// button common
+.btn {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: $font-size-16;
+  border: none;
+  cursor: pointer;
+
+  // bg gradient common
+  &.btn-primary {
+    @include btn(
+      5.6rem,
+      none,
+      linear-gradient(90deg, #eb7d37 0%, #f05c21 100%),
+      0.8rem,
+      1,
+      $color-white
+    );
+  }
+
+  &.btn-primary-m {
+    @include btn(
+      3.6rem,
+      none,
+      linear-gradient(90deg, #eb7d37 0%, #f05c21 100%),
+      0.8rem,
+      1,
+      $color-white
+    );
+  }
+
+  // 판매회원 가입하기
+  &.btn-sale-join {
+    @include btn(
+      5.4rem,
+      1px solid $color-primary,
+      $color-white,
+      0.8rem,
+      1,
+      $color-orange
+    );
+  }
+
+  // border primary
+  &.btn-primary-line,
+  &.btn-register {
+    @include btn(
+      5.4rem,
+      1px solid $color-primary,
+      $color-white,
+      0.8rem,
+      1,
+      $color-primary
+    );
+  }
+
+  // bg brown
+  &.btn-brown {
+    font-size: 1.4rem;
+    font-weight: 600;
+    @include btn(4rem, none, $color-brown, 0.4rem, 1, $color-white);
+  }
+
+  // apply
+  &.btn-apply {
+    width: 7.4rem;
+    font-size: 1.2rem;
+    @include btn(
+      3rem,
+      none,
+      linear-gradient(90deg, #eb7d37 0%, #f05c21 100%),
+      0.4rem,
+      1,
+      $color-white
+    );
+
+    &::after {
+      @include icon-image(1.4rem, 1rem, -8rem, -29rem);
+      margin-left: 1.1rem;
+    }
+  }
+
+  // download icon
+  &.btn-down {
+    width: 17.8rem;
+    font-size: 1.2rem;
+    @include btn(
+      3rem,
+      none,
+      linear-gradient(90deg, #eb7d37 0%, #f05c21 100%),
+      0.8rem,
+      1,
+      $color-white
+    );
+
+    &::before {
+      @include icon-image(1rem, 1.4rem, -15rem, -20rem);
+      margin-right: 1.1rem;
+    }
+
+    @media (max-width: 1180px) {
+      margin-right: 1.1rem;
+    }
+  }
+
+  // contact us
+  &.btn-contact {
+    margin-top: 0;
+    width: 28rem;
+    @include btn(
+      8rem,
+      none,
+      linear-gradient(90deg, #ec7826 0%, #f33a00 100%),
+      0.8rem,
+      1,
+      $color-white
+    );
+
+    &::before {
+      margin-right: 1.9rem;
+      @include icon-image(3rem, 4.1rem, -58rem, -8rem); // hit icon
+    }
+
+    &.btn-layer {
+      margin-right: -14rem;
+      bottom: -2rem;
+      margin-top: -5.5rem;
+
+      @media (max-width: 1500px) {
+        right: -1rem;
+      }
+
+      @media (max-width: 1180px) {
+        right: 0;
+        position: relative;
+        margin: 8rem 4rem 0rem;
+        width: calc(100% - 8rem);
+        position: relative;
+        margin: 4rem 4rem 0;
+        width: calc(100% - 8rem);
+      }
+
+      @media (max-width: 360px) {
+        margin: 8rem 2rem 0;
+        width: calc(100% - 4rem);
+      }
+    }
+  }
+
+  // 더보기
+  &.btn-more {
+    position: relative;
+    padding: 0 8.3rem 0 4.7rem;
+    @include btn(
+      5.4rem,
+      1px solid $color-orange,
+      $color-white,
+      0.8rem,
+      1,
+      $color-orange
+    );
+
+    @media (max-width: 380px) {
+      padding: 0 5.3rem 0 2.7rem;
+    }
+
+    &:after {
+      position: absolute;
+      right: 4.7rem;
+      top: 50%;
+      margin-top: -0.4rem;
+      @include icon-image(1.4rem, 0.9rem, -2rem, -20rem);
+
+      @media (max-width: 380px) {
+        right: 2.7rem;
+      }
+    }
+  }
+
+  // home 이동
+  &.btn-home {
+    width: 20.6rem;
+    font-weight: 300;
+    @include btn(
+      5.4rem,
+      1px solid $color-gray-9,
+      $color-white,
+      0.8rem,
+      1,
+      $color-gray-9
+    );
+  }
+}
+
+// notice
+.notice-btn {
+  position: relative;
+  cursor: pointer;
+  padding-right: 0;
+
+  // new icon
+  .new {
+    position: absolute;
+    top: 0.8rem;
+    right: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: $color-primary;
+    border-radius: 50%;
+    font-size: 1.3rem;
+    color: $color-gray-f8;
+  }
+}
+.notice-list {
+  display: none;
+  position: absolute;
+  top: 5rem;
+  right: -10.5rem;
+  z-index: 2;
+  width: 40rem;
+  padding: 1rem 0 0;
+  border-radius: 0.8rem;
+  background-color: $color-white;
+  border: 1px solid $color-gray-bf;
+
+  &::before {
+    position: absolute;
+    top: -0.7rem;
+    right: 12.8rem;
+    @include icon-image(1.2rem, 0.7rem, -77rem, -15rem);
+
+    @media (max-width: 1024px) {
+      right: 6.7rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    width: 20rem;
+  }
+
+  .no-notice {
+    padding: 1rem 0;
+    text-align: center;
+    @include font-style($font-size-12, 400, 2rem, 0, $color-gray-2);
+  }
+
+  .list {
+    li {
+      position: relative;
+      padding: 0.9rem 2.9rem;
+      border-bottom: 1px solid $color-gray-f8;
+      @include font-style($font-size-12, 400, 2rem, 0, $color-gray-2);
+
+      &::before {
+        position: absolute;
+        left: 1.6rem;
+        top: 1.6rem;
+        content: "";
+        width: 0.6rem;
+        height: 0.6rem;
+        background-color: $color-orange;
+        border-radius: 50%;
+      }
+
+      .date {
+        color: $color-gray-bf;
+      }
+    }
+  }
+
+  &.expand {
+    display: block;
+  }
+}
+
+// animation
+.back-to-position {
+  opacity: 0;
+  transition: 1s;
+  &.to-right {
+    transform: translateX(-15rem);
+  }
+  &.to-left {
+    transform: translateX(15rem);
+  }
+}
+.show {
+  .back-to-position {
+    opacity: 1;
+    transform: translateX(0);
+    &.delay-0 {
+      transition-delay: 0s;
+    }
+    &.delay-1 {
+      transition-delay: 0.3s;
+    }
+    &.delay-2 {
+      transition-delay: 0.6s;
+    }
+    &.delay-3 {
+      transition-delay: 0.3s;
+    }
+  }
+}
+#to-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: fixed;
+  bottom: 3rem;
+  right: 3rem;
+  width: 4rem;
+  height: 4rem;
+  background-color: $color-gray-2;
+  color: $color-white;
+  z-index: 10;
+  border-radius: 1rem;
+}

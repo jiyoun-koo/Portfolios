@@ -1,0 +1,47 @@
+@mixin icon-btn-image($width, $height, $border, $bpl, $bpt) {
+  display: block;
+  width: $width;
+  height: $height;
+  border: $border;
+  background: url("../images/icon_set.png") no-repeat $bpl $bpt;
+  background-size: 80rem 100rem;
+}
+
+@mixin icon-image($width, $height, $bpl, $bpt) {
+  content: "";
+  display: block;
+  width: $width;
+  height: $height;
+  background: url("../images/icon_set.png") no-repeat $bpl $bpt;
+  background-size: 80rem 100rem;
+}
+
+@mixin font-style(
+  $font-size,
+  $font-weight,
+  $line-height,
+  $letter-spacing,
+  $color
+) {
+  font-size: $font-size;
+  font-weight: $font-weight;
+  line-height: $line-height;
+  letter-spacing: $letter-spacing;
+  color: $color;
+}
+
+@mixin btn(
+  $height,
+  $border,
+  $background-color,
+  $border-radius,
+  $line-height,
+  $color
+) {
+  height: $height;
+  border: $border;
+  background: $background-color;
+  border-radius: $border-radius;
+  line-height: 2.5;
+  color: $color;
+}

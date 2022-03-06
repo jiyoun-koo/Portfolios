@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>portfolio</title>
+    <link rel="icon" href="../favicon.ico" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./scss/style.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"
+      integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- GSAP & SCrollTopPlugin -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"
+      integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollToPlugin.min.js"
+      integrity="sha512-agNfXmEo6F+qcj3WGryaRvl9X9wLMQORbTt5ACS9YVqzKDMzhRxY+xjgO45HCLm61OwHWR1Oblp4QSw/SGh9SA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- swiper -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <!-- scroll magic -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"
+      integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script defer src="./js/index.js"></script>
+  </head>
+  <body>
+    <!-- header -->
+    <header>
+      <div class="inner">
+        <!-- logo -->
+        <a href="/" class="logo"
+          ><img src="./images/logo.png" alt="KDX 데이터 거래소"
+        /></a>
+        <div class="sub-menu">
+          <ul class="menu">
+            <li>
+              <a href="/signin">Sign In</a>
+            </li>
+            <li>
+              <a href="/join">회원가입</a>
+            </li>
+            <li>
+              <a href="javascript:void(0)" class="notice-btn">
+                <span class="material-icons"> notifications </span>
+                <span class="new">1</span>
+              </a>
+              <!-- notice list -->
+              <div class="notice-list">
+                <ul class="list">
+                  <li>
+                    <span class="text">판매자 등록 신청이 승인되었습니다.</span>
+                    <div class="date">5분 전</div>
+                  </li>
+                  <li>
+                    <span class="text"
+                      >회원기간이 만료되었습니다. 마이 페이지에서 연회비 재결제
+                      가능합니다.</span
+                    >
+                    <div class="date">10월 20일</div>
+                  </li>
+                  <li>
+                    <span class="text">구매 승인 대기 중입니다.</span>
+                    <div class="date">1일 전</div>
+                  </li>
+                </ul>
+                <p class="no-notice">새로운 알림이 없습니다.</p>
+              </div>
+            </li>
+          </ul>
+          <div class="search">
+            <input type="text" />
+            <div class="material-icons">search</div>
+          </div>
+        </div>
+        <ul class="main-menu">
+          <li class="item">
+            <div class="item__name">데이터 상품</div>
+            <div class="item__contents">
+              <div class="contents__menu">
+                <ul class="inner">
+                  <li>추천 데이터</li>
+                  <li>전체 데이터</li>
+                  <li>무료 데이터</li>
+                  <li>유료 데이터</li>
+                  <li>맞춤 데이터</li>
+                  <li>데이터 리포트</li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="item">
+            <div class="item__name">인공지능</div>
+            <div class="item__contents">
+              <div class="contents__menu">
+                <ul class="inner">
+                  <li>데이터 솔루션</li>
+                  <li>데이터 인사이트</li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="item">
+            <div class="item__name">플랫폼서비스</div>
+            <div class="item__contents">
+              <div class="contents__menu">
+                <ul class="inner">
+                  <li>KDX-AI</li>
+                  <li>AI 데이터 상품</li>
+                  <li>MBN 동영상</li>
+                  <li>AI 학습용 데이터</li>
+                  <li>KDX-저작도구</li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="item">
+            <div class="item__name">데이터루</div>
+            <div class="item__contents">
+              <div class="contents__menu">
+                <ul class="inner">
+                  <li>데이터루</li>
+                  <li>데이터 스토리</li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="item">
+            <div class="item__name">이용안내</div>
+            <div class="item__contents">
+              <div class="contents__menu">
+                <ul class="inner">
+                  <li>회원가입 안내</li>
+                  <li>이용약관</li>
+                  <li>공지사항</li>
+                  <li>FAQ</li>
+                  <li>문의하기</li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="item">
+            <div class="item__name">KDX 소개</div>
+            <div class="item__contents">
+              <div class="contents__menu">
+                <ul class="inner">
+                  <li>KDX 소개</li>
+                  <li>KDX 소식</li>
+                  <li>참여기업</li>
+                </ul>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <aside class="badges">
+        <div class="badge">
+          <img src="./images/badges.png" alt="badge" />
+        </div>
+      </aside>
+    </header>
+    <!-- //header -->
+    <!-- visual -->
+    <!-- count -->
+    <section class="count-data">
+      <div class="container">
+        <h1 class="title fade-in">데이터와 사람이 만나는 공간, KDX</h1>
+        <div class="count-data-slide">
+          <div class="row-item item01 fade-in">
+            <div class="num"><strong class="fade-in">98,420</strong>개</div>
+            <div class="title">총 보유 데이터 수</div>
+          </div>
+          <div class="row-item item02 fade-in">
+            <div class="num"><strong class="fade-in">453,432</strong>명</div>
+            <div class="title">회원 수</div>
+          </div>
+          <div class="row-item item03 fade-in">
+            <div class="num"><strong class="fade-in">98,420</strong>GB</div>
+            <div class="title">보유 데이터 용량</div>
+          </div>
+          <div class="row-item item04 fade-in">
+            <div class="num"><strong class="fade-in">667</strong>개</div>
+            <div class="title">누적 다운로드 수</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- notice -->
+    <section class="notice">
+      <div class="notice-line">
+        <div class="inner">
+          <h2>공지사항</h2>
+          <!-- Slider main container -->
+          <div class="swiper-container">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">판매자 등록 신청이 승인되었습니다.</div>
+              <div class="swiper-slide">
+                회원기간이 만료되었습니다. 마이 페이지에서 연회비 재결제
+                가능합니다.
+              </div>
+              <div class="swiper-slide">구매 승인 대기 중입니다.</div>
+            </div>
+          </div>
+          <a href="" class="notice-more">
+            <span class="material-icons"> add_circle </span>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- banner -->
+    <section class="banner">
+      <div class="inner">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <a href="javascript:void(0);">
+                <span class="text">
+                  <span class="desc"
+                    >데이터를 몰라도 사업을 성장시킬 수 있도록
+                    KDX가지원해드립니다.</span
+                  >
+                  <strong class="title"><span>2022</span> 데이터바우처</strong>
+                </span>
+                <img
+                  class="img"
+                  src="./images/img-banner-01.png"
+                  alt="DATA VOUCHER"
+                />
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="javascript:void(0);">
+                <span class="text">
+                  <span class="desc"
+                    >2.데이터를 몰라도 사업을 성장시킬 수 있도록
+                    KDX가지원해드립니다.</span
+                  >
+                  <strong class="title"><span>2022</span> 데이터바우처</strong>
+                </span>
+                <img
+                  class="img"
+                  src="./images/img-banner-01.png"
+                  alt="DATA VOUCHER"
+                />
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="javascript:void(0);">
+                <span class="text">
+                  <span class="desc"
+                    >3.데이터를 몰라도 사업을 성장시킬 수 있도록
+                    KDX가지원해드립니다.</span
+                  >
+                  <strong class="title"><span>2022</span> 데이터바우처</strong>
+                </span>
+                <img
+                  class="img"
+                  src="./images/img-banner-01.png"
+                  alt="DATA VOUCHER"
+                />
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="javascript:void(0);">
+                <span class="text">
+                  <span class="desc"
+                    >4.데이터를 몰라도 사업을 성장시킬 수 있도록
+                    KDX가지원해드립니다.</span
+                  >
+                  <strong class="title"><span>2022</span> 데이터바우처</strong>
+                </span>
+                <img
+                  class="img"
+                  src="./images/img-banner-01.png"
+                  alt="DATA VOUCHER"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-prev"></div>
+        <div class="swiper-next"></div>
+      </div>
+    </section>
+    <!-- enterprise -->
+    <section class="enterprise sale scroll-spy">
+      <div class="inner">
+        <p class="info-desc back-to-position to-left delay-0">
+          <span><em>00</em>개 기업이 </span>
+          <strong>KDX를 통해</strong>
+          <span>데이터를 판매합니다</span>
+        </p>
+        <div class="enterprise-box back-to-position to-right delay-1">
+          <div class="inner">
+            <ul class="enterprise-list">
+              <li>
+                <img
+                  src="./images/main/logo/img-logo-ssc-s.png"
+                  alt="삼성카드"
+                />
+              </li>
+              <li>
+                <img
+                  src="./images/main/logo/img-logo-mbn-s.png"
+                  alt="MBN 매일방송"
+                />
+              </li>
+              <li>
+                <img
+                  src="./images/main/logo/img-logo-cj-s.png"
+                  alt="CJ 올리브네트윅스"
+                />
+              </li>
+              <li>
+                <img
+                  src="./images/main/logo/img-logo-skt-s.png"
+                  alt="SK telecom"
+                />
+              </li>
+              <li>
+                <img
+                  src="./images/main/logo/img-logo-skp-s.png"
+                  alt="SK 플래닛"
+                />
+              </li>
+              <li>
+                <img
+                  src="./images/main/logo/img-logo-wel-s.png"
+                  alt="웹컴에프앤디(주)"
+                />
+              </li>
+              <li>
+                <img
+                  src="./images/main/logo/img-logo-gsr-s.png"
+                  alt="GS 리테일"
+                />
+              </li>
+              <li>
+                <img
+                  src="./images/main/logo/img-logo-nice-s.png"
+                  alt="NICE 디앤알"
+                />
+              </li>
+              <li>
+                <img src="./images/main/logo/img-logo-vaiv-s.png" alt="VAIV" />
+              </li>
+              <li>
+                <img
+                  src="./images/main/logo/img-logo-dable-s.png"
+                  alt="Dable"
+                />
+              </li>
+              <li>
+                <img src="./images/main/logo/img-logo-lob-s.png" alt="Loplat" />
+              </li>
+              <li>
+                <img
+                  src="./images/main/logo/img-logo-bui-s.png"
+                  alt="Builton"
+                />
+              </li>
+              <li>
+                <img src="./images/main/logo/img-logo-sic-s.png" alt="식신" />
+              </li>
+              <li>
+                <img
+                  src="./images/main/logo/img-logo-hc-s.png"
+                  alt="온누리 H&amp;C"
+                />
+              </li>
+              <li>
+                <img src="./images/main/logo/img-logo-gin-s.png" alt="Gin+" />
+              </li>
+              <li>
+                <img src="./images/main/logo/img-logo-kcb-s.png" alt="KCB" />
+              </li>
+              <li>
+                <img
+                  src="./images/main/logo/img-logo-posa-s.png"
+                  alt="POSA 한국우편사업진흥원"
+                />
+              </li>
+              <li>
+                <img
+                  src="./images/main/logo/img-logo-dable-s.png"
+                  alt="Dable"
+                />
+              </li>
+              <li>
+                <img
+                  src="./images/main/logo/img-logo-gsr-s.png"
+                  alt="GS 리테일"
+                />
+              </li>
+              <li>
+                <img
+                  src="./images/main/logo/img-logo-nice-s.png"
+                  alt="NICE 디앤알"
+                />
+              </li>
+              <li>
+                <img src="./images/main/logo/img-logo-vaiv-s.png" alt="VAIV" />
+              </li>
+              <li>
+                <img
+                  src="./images/main/logo/img-logo-dable-s.png"
+                  alt="Dable"
+                />
+              </li>
+              <li>
+                <img src="./images/main/logo/img-logo-lob-s.png" alt="Loplat" />
+              </li>
+              <li>
+                <img
+                  src="./images/main/logo/img-logo-bui-s.png"
+                  alt="Builton"
+                />
+              </li>
+              <li>
+                <img
+                  src="./images/main/logo/img-logo-gsr-s.png"
+                  alt="GS 리테일"
+                />
+              </li>
+              <li>
+                <img
+                  src="./images/main/logo/img-logo-nice-s.png"
+                  alt="NICE 디앤알"
+                />
+              </li>
+              <li>
+                <img src="./images/main/logo/img-logo-vaiv-s.png" alt="VAIV" />
+              </li>
+              <li>
+                <img
+                  src="./images/main/logo/img-logo-dable-s.png"
+                  alt="Dable"
+                />
+              </li>
+              <li>
+                <img src="./images/main/logo/img-logo-lob-s.png" alt="Loplat" />
+              </li>
+              <li>
+                <img
+                  src="./images/main/logo/img-logo-bui-s.png"
+                  alt="Builton"
+                />
+              </li>
+              <li>
+                <img
+                  src="./images/main/logo/img-logo-gsr-s.png"
+                  alt="GS 리테일"
+                />
+              </li>
+              <li>
+                <img
+                  src="./images/main/logo/img-logo-nice-s.png"
+                  alt="NICE 디앤알"
+                />
+              </li>
+              <li>
+                <img src="./images/main/logo/img-logo-vaiv-s.png" alt="VAIV" />
+              </li>
+              <li>
+                <img
+                  src="./images/main/logo/img-logo-dable-s.png"
+                  alt="Dable"
+                />
+              </li>
+              <li>
+                <img src="./images/main/logo/img-logo-lob-s.png" alt="Loplat" />
+              </li>
+              <li>
+                <img
+                  src="./images/main/logo/img-logo-bui-s.png"
+                  alt="Builton"
+                />
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- community -->
+    <section class="community scroll-spy">
+      <div class="inner">
+        <p class="info-desc back-to-position to-left delay-0">
+          <strong>데이터 커뮤니티 소식</strong>
+          <span>을 알립니다</span>
+        </p>
+        <div class="swiper-container back-to-position to-right delay-1">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <a href="javascript:void(0)">
+                <img src="./images/img-community-01.png" alt="Google Play" />
+                <em class="category">데이터루 • 12호</em>
+                <strong class="title"
+                  >[데이터루 12호] 인앱 결제 논란? 결국은 데이터 싸움!</strong
+                >
+                <span class="date">2021.09.07</span>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="javascript:void(0)">
+                <img src="./images/img-community-02.png" alt="Google Play" />
+                <em class="category">데이터 스토리 • 미디어</em>
+                <strong class="title"
+                  >"우리 오늘 '내식'할까?"...음식 소비 절반이 '배달'</strong
+                >
+                <span class="date">2021.04.15</span>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="javascript:void(0)">
+                <img src="./images/img-community-03.png" alt="Google Play" />
+                <em class="category">데이터루 • 12호</em>
+                <strong class="title">빅데이터 플랫폼 Meet-UP DAY</strong>
+                <span class="date">2021.09.16</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <a href="javascript:void(0)" class="btn btn-primary">
+          <span>KDX 회원 혜택 보러가기</span>
+        </a>
+      </div>
+    </section>
+    <!-- sale join info -->
+    <section class="join-sale scroll-spy">
+      <div class="inner">
+        <div class="join-sale-inner">
+          <div class="title back-to-position to-left delay-0">
+            <span>데이터 판매를</span> 원하시나요?
+          </div>
+          <p class="desc back-to-position to-left delay-1">
+            <span>KDX의 판매회원으로</span>
+            <span>데이터 판매를 시작해보세요.</span>
+          </p>
+          <a
+            href="javascript:void(0)"
+            class="btn btn-sale-join back-to-position to-left delay-2"
+          >
+            <span>판매회원 가입하기</span>
+          </a>
+          <img
+            src="../src/images/img-join.png"
+            alt="상점 아이콘"
+            class="img-join back-to-position to-left delay-3"
+          />
+        </div>
+      </div>
+    </section>
+    <!-- sitemap -->
+    <section class="sitemap">
+      <div class="toggle-sitemap expand">
+        <span class="material-icons more"> expand_more </span>
+        <span class="material-icons less"> expand_less </span>
+      </div>
+      <div class="inner">
+        <div class="row">
+          <div class="row-item">
+            <h2>
+              <a href="#">데이터 마켓</a>
+            </h2>
+            <ul class="sitemap-list">
+              <li><a href="#">전체 데이터</a></li>
+              <li><a href="#">AI 사업관</a></li>
+              <li><a href="#">리포트 데이터</a></li>
+              <li><a href="#">기업별 데이터</a></li>
+            </ul>
+          </div>
+          <div class="row-item">
+            <h2>
+              <a href="#">서비스</a>
+            </h2>
+            <ul class="sitemap-list">
+              <li><a href="#">플랫폼 서비스</a></li>
+              <li><a href="#">맞춤 서비스</a></li>
+              <li><a href="#">분석툴</a></li>
+            </ul>
+          </div>
+          <div class="row-item">
+            <h2 class="bul-icon">
+              <a href="#">데이터 커뮤니티</a>
+            </h2>
+            <ul class="sitemap-list">
+              <li><a href="#">KDX 소개</a></li>
+              <li><a href="#">KDX 소식</a></li>
+              <li><a href="#">데이터루</a></li>
+              <li><a href="#">데이터 스토리</a></li>
+              <li><a href="#">자주 묻는 질문</a></li>
+              <li><a href="#">문의하기</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="news">
+          <h2>KDX 뉴스레터 데이터루</h2>
+          <a href="javascript:void(0)" class="btn btn-primary-m">
+            <span>무료 구독하기</span>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- footer -->
+    <footer class="footer">
+      <div class="inner">
+        <div class="footer-menu">
+          <div class="footer-logo">(주)케이디엑스한국데이터거래소</div>
+          <ul class="footer-menu-list">
+            <li><a href="javascript:void(0);">가입회원 이용약관</a></li>
+            <li class="selected">
+              <a href="javascript:void(0);">개인정보 처리방침</a>
+            </li>
+            <li><a href="javascript:void(0);">회원가입 안내</a></li>
+            <li><a href="javascript:void(0);">판매회원 안내</a></li>
+          </ul>
+        </div>
+        <p class="footer-desc">
+          <span
+            >(주)케이디엑스한국데이터거래소는 통신판매중개자이며 통신판매의
+            당사자가 아닙니다. <br />
+            따라서 (주)케이디엑스한국데이터거래소는 상품·거래정보 및 거래에
+            대하여 책임을 지지 않습니다.</span
+          >
+        </p>
+        <div class="footer-info">
+          <p>
+            <span>대표자: 박재현</span>
+            <span>사업자번호: 469-87-01591</span>
+            <span>통신판매업신고: 제 2019-서울중구-2344호</span>
+          </p>
+          <p>
+            <span
+              >주소: 서울특별시 중구 충무로 2, 4층(필동 1가,
+              매일경제신문사빌딩)</span
+            >
+            <span>대표 전화 : 02-2000-5936</span>
+            <span>대표 이메일: webmaster@kdx.kr</span>
+          </p>
+        </div>
+        <div class="footer-bottom">
+          <p class="footer_copy">
+            &copy Copyright (주)케이디엑스한국데이터거래소 All rights reserved.
+          </p>
+          <ul class="sns-list">
+            <li class="sns-kakao">
+              <a href="https://pf.kakao.com/_HMIxlxb" target="_blank">
+                <span class="blind">KDX한국데이터거래소 카카오톡채널</span>
+              </a>
+            </li>
+            <li class="sns-inst">
+              <a href="https://www.instagram.com/kdx.kr/?hl=ko" target="_blank">
+                <span class="blind">KDX한국데이터거래소 인스타그램</span>
+              </a>
+            </li>
+            <li class="sns-facebook">
+              <a href="https://www.facebook.com/KDXDATA/" target="_blank">
+                <span class="blind">KDX한국데이터거래소 페이스북</span>
+              </a>
+            </li>
+            <li class="sns-blog">
+              <a href="https://blog.naver.com/kdxgroups" target="_blank">
+                <span class="blind">한국데이터거래소 블로그</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <div id="to-top">
+      <div class="material-icons">arrow_upward</div>
+    </div>
+  </body>
+</html>
