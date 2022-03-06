@@ -72,10 +72,8 @@
 
 // button common
 .btn {
-  display: flex;
   text-align: center;
-  align-items: center;
-  justify-content: center;
+  @include center;
   font-weight: 600;
   font-size: $font-size-16;
   border: none;
@@ -278,9 +276,7 @@
     position: absolute;
     top: 0.8rem;
     right: 1.2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include center;
     width: 1.5rem;
     height: 1.5rem;
     background-color: $color-primary;
@@ -381,9 +377,7 @@
   }
 }
 #to-top {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include center;
   cursor: pointer;
   position: fixed;
   bottom: 3rem;

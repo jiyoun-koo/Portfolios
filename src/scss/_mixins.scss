@@ -3,7 +3,7 @@
   width: $width;
   height: $height;
   border: $border;
-  background: url("../images/icon_set.png") no-repeat $bpl $bpt;
+  background: url(../images/icon_set.png) no-repeat $bpl $bpt;
   background-size: 80rem 100rem;
 }
 
@@ -12,7 +12,7 @@
   display: block;
   width: $width;
   height: $height;
-  background: url("../images/icon_set.png") no-repeat $bpl $bpt;
+  background: url(../images/icon_set.png) no-repeat $bpl $bpt;
   background-size: 80rem 100rem;
 }
 
@@ -44,4 +44,10 @@
   border-radius: $border-radius;
   line-height: 2.5;
   color: $color;
+}
+
+@mixin center() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

@@ -1,0 +1,126 @@
+// join step tab
+.join-step-tab {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 4rem;
+
+  @media (max-width: 480px) {
+    margin: 0 1.6rem;
+  }
+
+  li {
+    position: relative;
+    margin-left: 9.5rem;
+    flex-shrink: 0;
+    flex-basis: auto;
+    text-align: center;
+
+    @media (max-width: 360px) {
+      margin-left: 7rem;
+    }
+
+    &::after {
+      position: absolute;
+      left: 50%;
+      top: 1.8rem;
+      margin-left: -10.8rem;
+      display: block;
+      content: " ";
+      width: 8.3rem;
+      height: 0.2rem;
+      background-color: $color-gray-d0;
+
+      @media (max-width: 360px) {
+        width: 6rem;
+        margin-left: -8.4rem;
+      }
+    }
+
+    &:first-child {
+      margin-left: 0;
+
+      &::after {
+        display: none;
+      }
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      @include font-style($font-size-14, 400, 1.9, -0.11em, $color-gray-bf);
+
+      span {
+        position: absolute;
+        top: 5.2rem;
+        left: 50%;
+        margin-left: -3.5rem;
+        width: 8rem;
+        display: block;
+        text-align: center;
+      }
+
+      &::before {
+        display: block;
+        width: 3.8rem;
+        height: 3.8rem;
+        border-radius: 50%;
+        text-indent: -0.3rem;
+        @include font-style($font-size-20, 400, 1.9, -0.11em, $color-white);
+        background-color: $color-gray-e2;
+      }
+    }
+    @for $i from 1 through 4 {
+      &:nth-child(#{$i}) {
+        a {
+          &::before {
+            content: "#{$i}";
+          }
+        }
+      }
+    }
+
+    &.selected {
+      &:after {
+        background-color: $color-orange;
+      }
+
+      a {
+        color: $color-orange;
+
+        &::before {
+          color: $color-white;
+          background-color: $color-orange;
+        }
+      }
+    }
+  }
+
+  &.tab4 {
+    li {
+      margin-left: 5rem;
+
+      @media (max-width: 360px) {
+        margin-left: 3rem;
+      }
+
+      &::after {
+        width: 3.8rem;
+        margin-left: -6.3rem;
+
+        @media (max-width: 360px) {
+          width: 2.5rem;
+          margin-left: -4.5rem;
+        }
+      }
+
+      &:first-child {
+        margin-left: 0;
+
+        &::after {
+          display: none;
+        }
+      }
+    }
+  }
+}

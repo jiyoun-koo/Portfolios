@@ -3,7 +3,7 @@
   max-height: 65rem;
   padding-top: 6.4rem;
   margin-top: 12rem;
-  background: url("../images/bg-main.png") no-repeat center center;
+  background: url(../images/bg-main.png) no-repeat center center;
   background-size: cover;
   padding-bottom: 17.6rem;
 
@@ -14,8 +14,7 @@
 
   .container {
     color: $color-white;
-    align-items: center;
-    justify-content: center;
+    @include center;
     padding-top: 2.6rem;
     width: 100%;
 
@@ -158,6 +157,8 @@
     h2 {
       font-size: 1.7rem;
       color: $color-white;
+      flex-shrink: 0;
+      flex-basis: auto;
     }
     .swiper-container {
       flex-grow: 1;
@@ -175,9 +176,7 @@
     .notice-more {
       width: 6rem;
       height: 6rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      @include center;
       font-size: 3rem;
       color: $color-white;
     }
