@@ -1,0 +1,330 @@
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1,minimum-scale=1, maximum-scale=2, user-scalable=no"
+    />
+    <link rel="icon" href="../favicon.ico" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../scss/style.css" />
+
+    <!-- GSAP & SCrollTopPlugin -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"
+      integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollToPlugin.min.js"
+      integrity="sha512-agNfXmEo6F+qcj3WGryaRvl9X9wLMQORbTt5ACS9YVqzKDMzhRxY+xjgO45HCLm61OwHWR1Oblp4QSw/SGh9SA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollToPlugin.min.js"
+      integrity="sha512-agNfXmEo6F+qcj3WGryaRvl9X9wLMQORbTt5ACS9YVqzKDMzhRxY+xjgO45HCLm61OwHWR1Oblp4QSw/SGh9SA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script defer src="../js/common.js"></script>
+    <title>KDX 한국데이터거래소</title>
+  </head>
+  <body>
+    <!-- header -->
+    <header>
+      <div class="inner">
+        <!-- logo -->
+        <a href="/" class="logo"
+          ><img src="../images/logo.png" alt="KDX 데이터 거래소"
+        /></a>
+        <div class="sub-menu">
+          <ul class="menu">
+            <li>
+              <a href="/signin">Sign In</a>
+            </li>
+            <li>
+              <a href="/join">회원가입</a>
+            </li>
+            <li>
+              <a href="javascript:void(0)" class="notice-btn">
+                <span class="material-icons"> notifications </span>
+                <span class="new">1</span>
+              </a>
+              <!-- notice list -->
+              <div class="notice-list">
+                <ul class="list">
+                  <li>
+                    <span class="text">판매자 등록 신청이 승인되었습니다.</span>
+                    <div class="date">5분 전</div>
+                  </li>
+                  <li>
+                    <span class="text"
+                      >회원기간이 만료되었습니다. 마이 페이지에서 연회비 재결제
+                      가능합니다.</span
+                    >
+                    <div class="date">10월 20일</div>
+                  </li>
+                  <li>
+                    <span class="text">구매 승인 대기 중입니다.</span>
+                    <div class="date">1일 전</div>
+                  </li>
+                </ul>
+                <p class="no-notice">새로운 알림이 없습니다.</p>
+              </div>
+            </li>
+          </ul>
+          <div class="search">
+            <input type="text" />
+            <div class="material-icons">search</div>
+          </div>
+        </div>
+        <ul class="main-menu">
+          <li class="item">
+            <div class="item__name">데이터 상품</div>
+            <div class="item__contents">
+              <div class="contents__menu">
+                <ul class="inner">
+                  <li>추천 데이터</li>
+                  <li>전체 데이터</li>
+                  <li>무료 데이터</li>
+                  <li>유료 데이터</li>
+                  <li>맞춤 데이터</li>
+                  <li>데이터 리포트</li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="item">
+            <div class="item__name">인공지능</div>
+            <div class="item__contents">
+              <div class="contents__menu">
+                <ul class="inner">
+                  <li>데이터 솔루션</li>
+                  <li>데이터 인사이트</li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="item">
+            <div class="item__name">플랫폼서비스</div>
+            <div class="item__contents">
+              <div class="contents__menu">
+                <ul class="inner">
+                  <li>KDX-AI</li>
+                  <li>AI 데이터 상품</li>
+                  <li>MBN 동영상</li>
+                  <li>AI 학습용 데이터</li>
+                  <li>KDX-저작도구</li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="item">
+            <div class="item__name">데이터루</div>
+            <div class="item__contents">
+              <div class="contents__menu">
+                <ul class="inner">
+                  <li>데이터루</li>
+                  <li>데이터 스토리</li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="item">
+            <div class="item__name">이용안내</div>
+            <div class="item__contents">
+              <div class="contents__menu">
+                <ul class="inner">
+                  <li>회원가입 안내</li>
+                  <li>이용약관</li>
+                  <li>공지사항</li>
+                  <li>FAQ</li>
+                  <li>문의하기</li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="item">
+            <div class="item__name">KDX 소개</div>
+            <div class="item__contents">
+              <div class="contents__menu">
+                <ul class="inner">
+                  <li>KDX 소개</li>
+                  <li>KDX 소식</li>
+                  <li>참여기업</li>
+                </ul>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <section class="login-wrap">
+      <h1 class="logo">
+        <span class="blind">KDX</span>
+      </h1>
+      <h2 class="title-login">로그인</h2>
+      <form>
+        <fieldset class="form-fieldset">
+          <legend class="blind">로그인</legend>
+          <input type="text" placeholder="아이디" class="input-text" />
+          <input type="password" placeholder="비민번호" class="input-text" />
+          <ul class="login-rel">
+            <li><a href="javascript:void(0)">아이디찾기</a></li>
+            <li><a href="javascript:void(0)">비밀번호찾기</a></li>
+          </ul>
+          <a href="javascript:void(0)" class="btn btn-primary"
+            ><span>로그인</span></a
+          >
+          <a href="javascript:void(0)" class="btn btn-primary-line"
+            ><span>회원가입</span></a
+          >
+          <ul class="social-sgin">
+            <li class="item">
+              <a href="javascript:void(0)" class="kakao"
+                ><span class="text">카카오 계정으로 <br />로그인</span></a
+              >
+            </li>
+            <li class="item">
+              <a href="javascript:void(0)" class="naver"
+                ><span class="text">네이버 계정으로 <br />로그인</span></a
+              >
+            </li>
+            <li class="item">
+              <a href="javascript:void(0)" class="facebook"
+                ><span class="text">페이스북 계정으로 <br />로그인</span></a
+              >
+            </li>
+          </ul>
+        </fieldset>
+      </form>
+    </section>
+    <!-- sitemap -->
+    <section class="sitemap">
+      <div class="toggle-sitemap expand">
+        <span class="material-icons more"> expand_more </span>
+        <span class="material-icons less"> expand_less </span>
+      </div>
+      <div class="inner">
+        <div class="row">
+          <div class="row-item">
+            <h2>
+              <a href="javascript:void(0)">데이터 마켓</a>
+            </h2>
+            <ul class="sitemap-list">
+              <li><a href="javascript:void(0)">전체 데이터</a></li>
+              <li><a href="javascript:void(0)">AI 사업관</a></li>
+              <li><a href="javascript:void(0)">리포트 데이터</a></li>
+              <li><a href="javascript:void(0)">기업별 데이터</a></li>
+            </ul>
+          </div>
+          <div class="row-item">
+            <h2>
+              <a href="javascript:void(0)">서비스</a>
+            </h2>
+            <ul class="sitemap-list">
+              <li><a href="javascript:void(0)">플랫폼 서비스</a></li>
+              <li><a href="javascript:void(0)">맞춤 서비스</a></li>
+              <li><a href="javascript:void(0)">분석툴</a></li>
+            </ul>
+          </div>
+          <div class="row-item">
+            <h2 class="bul-icon">
+              <a href="javascript:void(0)">데이터 커뮤니티</a>
+            </h2>
+            <ul class="sitemap-list">
+              <li><a href="javascript:void(0)">KDX 소개</a></li>
+              <li><a href="javascript:void(0)">KDX 소식</a></li>
+              <li><a href="javascript:void(0)">데이터루</a></li>
+              <li><a href="javascript:void(0)">데이터 스토리</a></li>
+              <li><a href="javascript:void(0)">자주 묻는 질문</a></li>
+              <li><a href="javascript:void(0)">문의하기</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="news">
+          <h2>KDX 뉴스레터 데이터루</h2>
+          <a href="javascript:void(0)" class="btn btn-primary-m">
+            <span>무료 구독하기</span>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- footer -->
+    <footer class="footer">
+      <div class="inner">
+        <div class="footer-menu">
+          <div class="footer-logo">(주)케이디엑스한국데이터거래소</div>
+          <ul class="footer-menu-list">
+            <li><a href="javascript:void(0);">가입회원 이용약관</a></li>
+            <li class="selected">
+              <a href="javascript:void(0);">개인정보 처리방침</a>
+            </li>
+            <li><a href="javascript:void(0);">회원가입 안내</a></li>
+            <li><a href="javascript:void(0);">판매회원 안내</a></li>
+          </ul>
+        </div>
+        <p class="footer-desc">
+          <span
+            >(주)케이디엑스한국데이터거래소는 통신판매중개자이며 통신판매의
+            당사자가 아닙니다. <br />
+            따라서 (주)케이디엑스한국데이터거래소는 상품·거래정보 및 거래에
+            대하여 책임을 지지 않습니다.</span
+          >
+        </p>
+        <div class="footer-info">
+          <p>
+            <span>대표자: 박재현</span>
+            <span>사업자번호: 469-87-01591</span>
+            <span>통신판매업신고: 제 2019-서울중구-2344호</span>
+          </p>
+          <p>
+            <span
+              >주소: 서울특별시 중구 충무로 2, 4층(필동 1가,
+              매일경제신문사빌딩)</span
+            >
+            <span>대표 전화 : 02-2000-5936</span>
+            <span>대표 이메일: webmaster@kdx.kr</span>
+          </p>
+        </div>
+        <div class="footer-bottom">
+          <p class="footer_copy">
+            &copy Copyright (주)케이디엑스한국데이터거래소 All rights reserved.
+          </p>
+          <ul class="sns-list">
+            <li class="sns-kakao">
+              <a href="https://pf.kakao.com/_HMIxlxb" target="_blank">
+                <span class="blind">KDX한국데이터거래소 카카오톡채널</span>
+              </a>
+            </li>
+            <li class="sns-inst">
+              <a href="https://www.instagram.com/kdx.kr/?hl=ko" target="_blank">
+                <span class="blind">KDX한국데이터거래소 인스타그램</span>
+              </a>
+            </li>
+            <li class="sns-facebook">
+              <a href="https://www.facebook.com/KDXDATA/" target="_blank">
+                <span class="blind">KDX한국데이터거래소 페이스북</span>
+              </a>
+            </li>
+            <li class="sns-blog">
+              <a href="https://blog.naver.com/kdxgroups" target="_blank">
+                <span class="blind">한국데이터거래소 블로그</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <div id="to-top">
+      <div class="material-icons">arrow_upward</div>
+    </div>
+  </body>
+</html>

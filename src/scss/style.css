@@ -1767,6 +1767,224 @@ header .badges .badge img {
   margin-left: 0;
 }
 
+.login-wrap {
+  width: 38rem;
+  margin: auto;
+  margin-bottom: 9.7rem;
+}
+
+@media (max-width: 380px) {
+  .login-wrap {
+    width: calc(100% - 3.2rem);
+    padding: 0 1.6rem;
+  }
+}
+
+.login-wrap .logo {
+  margin: 14rem auto;
+  width: 10rem;
+  height: 4rem;
+  background: url("../images/icon_set.png") no-repeat -64rem 0;
+  background-size: 80rem 100rem;
+}
+
+.login-wrap .title-login {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 4rem;
+  letter-spacing: 0;
+  color: #262626;
+}
+
+.login-wrap .form-fieldset {
+  margin-top: 4rem;
+}
+
+.login-wrap .form-fieldset .input-text {
+  width: 100%;
+  height: 5.4rem;
+  padding: 0 2rem;
+  border: 1px solid #d0d0d0;
+  border-radius: 0.8rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0;
+  color: #202020;
+}
+
+.login-wrap .form-fieldset .login-rel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-top: 1rem;
+}
+
+.login-wrap .form-fieldset .login-rel li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 2.4rem;
+}
+
+.login-wrap .form-fieldset .login-rel li::before {
+  display: block;
+  content: " ";
+  width: 0.1rem;
+  height: 1.2rem;
+  margin-right: 2.4rem;
+  background-color: #dbdbdb;
+}
+
+.login-wrap .form-fieldset .login-rel li:first-child {
+  padding-left: 0;
+}
+
+.login-wrap .form-fieldset .login-rel li:first-child::before {
+  display: none;
+}
+
+.login-wrap .form-fieldset .login-rel li a {
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 2;
+  letter-spacing: 0;
+  color: #999;
+}
+
+.login-wrap .form-fieldset .btn {
+  margin-top: 1rem;
+}
+
+.login-wrap .form-fieldset .social-sgin {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin-top: 3rem;
+}
+
+.login-wrap .form-fieldset .social-sgin .item a {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 380px) {
+  .login-wrap .form-fieldset .social-sgin .item a {
+    padding: 0 1rem;
+  }
+}
+
+.login-wrap .form-fieldset .social-sgin .item a::before {
+  content: "";
+  display: block;
+  width: 7rem;
+  height: 7rem;
+  background: url("../images/icon_set.png") no-repeat 0 0;
+  background-size: 80rem 100rem;
+}
+
+.login-wrap .form-fieldset .social-sgin .item a .text {
+  display: block;
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.6rem;
+  letter-spacing: 0;
+  color: #999;
+}
+
+.login-wrap .form-fieldset .social-sgin .item a.kakao::before {
+  background-position: -20rem -15rem;
+}
+
+.login-wrap .form-fieldset .social-sgin .item a.naver::before {
+  background-position: -30rem -15rem;
+}
+
+.login-wrap .form-fieldset .social-sgin .item a.facebook::before {
+  background-position: -40rem -15rem;
+}
+
+.login-wrap.profile-wrap {
+  margin-bottom: 9.7rem;
+}
+
+@media (max-width: 480px) {
+  .login-wrap.profile-wrap .logo {
+    margin: 10rem auto;
+  }
+}
+
+.login-wrap.profile-wrap .page-desc {
+  margin-top: 1rem;
+  text-align: center;
+  color: #000;
+}
+
+.login-wrap.profile-wrap label {
+  margin-top: 3rem;
+}
+
+.login-wrap.profile-wrap label:first-of-type {
+  margin-top: 0;
+}
+
+.login-wrap.profile-wrap .input-text {
+  border: none;
+  padding: 0;
+}
+
+.login-wrap.profile-wrap .input-text {
+  margin-top: 1rem;
+  height: 5.8rem;
+}
+
+.login-wrap.profile-wrap .input-text .input-t {
+  height: 5.8rem;
+}
+
+.login-wrap.profile-wrap .select select {
+  height: 5.8rem;
+}
+
+.login-wrap.profile-wrap .btn-wrap-center {
+  margin-top: 10rem;
+}
+
+@media (max-width: 480px) {
+  .login-wrap.profile-wrap .btn-wrap-center {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0 3rem;
+  }
+}
+
+.login-wrap.profile-wrap .info-desc-14 {
+  margin-top: 2.4rem;
+}
+
 .count-data {
   max-height: 65rem;
   padding-top: 6.4rem;
