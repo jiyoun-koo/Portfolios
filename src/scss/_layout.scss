@@ -161,7 +161,7 @@ header {
   max-height: 65rem;
   padding-top: 6.4rem;
   margin-top: 12rem;
-  background: url("./images/bg-main.png") no-repeat center center;
+  background: url(../images/bg-main.png) no-repeat center center;
   background-size: cover;
   padding-bottom: 17.6rem;
 
@@ -172,8 +172,7 @@ header {
 
   .inner {
     color: $color-white;
-    align-items: center;
-    justify-content: center;
+    @include center;
     padding-top: 2.6rem;
     width: 100%;
 
@@ -310,7 +309,7 @@ header {
 // sales member join footer banner
 .join-sale {
   height: 30rem;
-  background: url("../images/bg-join.png") no-repeat center center;
+  background: url(../images/bg-join.png) no-repeat center center;
   background-size: cover;
 
   @media (max-width: 768px) {
@@ -811,7 +810,7 @@ header {
     margin: 14rem auto;
     width: 10rem;
     height: 4rem;
-    background: url("../images/icon_set.png") no-repeat -64rem 0;
+    background: url(../images/icon_set.png) no-repeat -64rem 0;
     background-size: 80rem 100rem;
   }
 
@@ -890,7 +889,7 @@ header {
             display: block;
             width: 7rem;
             height: 7rem;
-            background: url("../images/icon_set.png") no-repeat 0 0;
+            background: url(../images/icon_set.png) no-repeat 0 0;
             background-size: 80rem 100rem;
           }
 
