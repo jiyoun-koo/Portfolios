@@ -795,3 +795,188 @@ header {
     }
   }
 }
+
+// login
+.login-wrap {
+  width: 38rem;
+  margin: auto;
+  margin-bottom: 9.7rem;
+
+  @media (max-width: 380px) {
+    width: calc(100% - 3.2rem);
+    padding: 0 1.6rem;
+  }
+
+  .logo {
+    margin: 14rem auto;
+    width: 10rem;
+    height: 4rem;
+    background: url("../images/icon_set.png") no-repeat -64rem 0;
+    background-size: 80rem 100rem;
+  }
+
+  .title-login {
+    text-align: center;
+    @include font-style($font-size-30, 600, 4rem, 0, $color-secondary);
+  }
+
+  .form-fieldset {
+    margin-top: 4rem;
+
+    .input-text {
+      width: 100%;
+      height: 5.4rem;
+      padding: 0 2rem;
+      border: 1px solid $color-gray-d0;
+      border-radius: 0.8rem;
+      @include font-style($font-size-16, 400, 1, 0, $color-gray-20);
+    }
+
+    .login-rel {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 1rem;
+
+      li {
+        display: flex;
+        align-items: center;
+        padding-left: 2.4rem;
+
+        &::before {
+          display: block;
+          content: " ";
+          width: 0.1rem;
+          height: 1.2rem;
+          margin-right: 2.4rem;
+          background-color: $color-gray-db;
+        }
+
+        &:first-child {
+          padding-left: 0;
+
+          &::before {
+            display: none;
+          }
+        }
+
+        a {
+          @include font-style($font-size-12, 400, 2, 0, $color-gray-9);
+        }
+      }
+    }
+
+    .btn {
+      margin-top: 1rem;
+    }
+
+    .social-sgin {
+      display: flex;
+      justify-content: space-evenly;
+      margin-top: 3rem;
+
+      .item {
+        a {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          @media (max-width: 380px) {
+            padding: 0 1rem;
+          }
+
+          &::before {
+            content: "";
+            display: block;
+            width: 7rem;
+            height: 7rem;
+            background: url("../images/icon_set.png") no-repeat 0 0;
+            background-size: 80rem 100rem;
+          }
+
+          .text {
+            display: block;
+            margin-top: 1rem;
+            text-align: center;
+            @include font-style($font-size-12, 400, 1.6rem, 0, $color-gray-9);
+          }
+
+          &.kakao {
+            &::before {
+              background-position: -20rem -15rem;
+            }
+          }
+
+          &.naver {
+            &::before {
+              background-position: -30rem -15rem;
+            }
+          }
+
+          &.facebook {
+            &::before {
+              background-position: -40rem -15rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.profile-wrap {
+    margin-bottom: 9.7rem;
+
+    .logo {
+      @media (max-width: 480px) {
+        margin: 10rem auto;
+      }
+    }
+
+    .page-desc {
+      margin-top: 1rem;
+      text-align: center;
+      color: $color-black;
+    }
+
+    label {
+      margin-top: 3rem;
+
+      &:first-of-type {
+        margin-top: 0;
+      }
+    }
+
+    .input-text {
+      border: none;
+      padding: 0;
+    }
+
+    .input-text {
+      margin-top: 1rem;
+      height: 5.8rem;
+
+      .input-t {
+        height: 5.8rem;
+      }
+    }
+
+    .select {
+      select {
+        height: 5.8rem;
+      }
+    }
+
+    .btn-wrap-center {
+      margin-top: 10rem;
+
+      @media (max-width: 480px) {
+        flex-direction: column;
+        padding: 0 3rem;
+      }
+    }
+
+    .info-desc-14 {
+      margin-top: 2.4rem;
+    }
+  }
+}
