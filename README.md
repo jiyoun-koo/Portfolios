@@ -1,6 +1,6 @@
 ## portfolios
 
-###html
+##html
 
 [index.html](https://github.com/jiyoun-koo/Portfolios/tree/master/src)
 
@@ -8,13 +8,13 @@
 
 ---
 
-###scss
+##scss
 
 [.scss](https://github.com/jiyoun-koo/Portfolios/tree/master/src/scss)
 
 ---
 
-###js
+##js
 
 [.js](https://github.com/jiyoun-koo/Portfolios/tree/master/src/js)
 
